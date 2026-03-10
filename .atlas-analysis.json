@@ -1,0 +1,135 @@
+{
+  "projectType": "api-service",
+  "projectName": "FastAPI User Management API",
+  "projectDescription": "A REST API built with FastAPI featuring user authentication, JWT token management, and CRUD operations with MongoDB",
+  "theme": "aspen",
+  "primaryColor": "#009485",
+  "lightColor": "#00b89f",
+  "darkColor": "#007a6e",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "architecture/overview",
+              "architecture/clean-architecture",
+              "architecture/domain-layer",
+              "architecture/application-layer",
+              "architecture/infrastructure-layer"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "authentication/overview",
+              "authentication/jwt-tokens",
+              "authentication/login",
+              "authentication/registration"
+            ]
+          },
+          {
+            "group": "Database",
+            "pages": [
+              "database/mongodb-setup",
+              "database/connection",
+              "database/repositories"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api-reference/overview",
+              "api-reference/authentication",
+              "api-reference/users"
+            ]
+          },
+          {
+            "group": "Schemas",
+            "pages": [
+              "api-reference/schemas/user-create",
+              "api-reference/schemas/user-update",
+              "api-reference/schemas/user-response"
+            ]
+          },
+          {
+            "group": "Security",
+            "pages": [
+              "api-reference/security/token-validation",
+              "api-reference/security/password-hashing",
+              "api-reference/security/roles"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Usage Guides",
+            "pages": [
+              "guides/user-management",
+              "guides/authentication-flow",
+              "guides/error-handling",
+              "guides/dependencies"
+            ]
+          },
+          {
+            "group": "Development",
+            "pages": [
+              "guides/development/setup",
+              "guides/development/running-locally",
+              "guides/development/environment-variables"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "JWT-based authentication with OAuth2 password flow",
+    "User registration and login endpoints",
+    "Role-based access control (Admin/Client)",
+    "Complete CRUD operations for user management",
+    "Clean Architecture with domain-driven design",
+    "Async MongoDB integration with Motor",
+    "Password hashing with passlib",
+    "Dependency injection for repositories and validation"
+  ],
+  "publicApiSurface": [
+    "POST /users/login - Authenticate user and receive JWT token",
+    "POST /users/register - Register new user account",
+    "GET /users - List all users (authenticated)",
+    "GET /users/query - Query users by field (authenticated)",
+    "GET /users/{id} - Get user by ID (authenticated)",
+    "PUT /users/{id} - Update user information",
+    "PATCH /users/{id} - Update user password",
+    "DELETE /users/{id} - Delete user (authenticated)",
+    "User (domain entity)",
+    "UserCreate (schema)",
+    "UserUpdate (schema)",
+    "UserResponse (schema)",
+    "RoleUser (value object)",
+    "RegisterUserUseCase",
+    "LoginUserUseCase",
+    "UpdateUserUseCase",
+    "DeleteUserUseCase",
+    "GetUserByQueryUseCase",
+    "ListUsersUseCase"
+  ]
+}
